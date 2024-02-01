@@ -1,0 +1,58 @@
+{
+    "Cisco-IOS-XE-native:Vlan": [
+        {
+            "name": 1,
+            "shutdown": null,
+            "logging": {
+                "event": {
+                    "link-status": null
+                }
+            }
+        },
+        {
+            "name": 2,
+            "ip": {
+                "address": {
+                    "primary": {
+                        "address": "10.10.10.1",
+                        "mask": "255.255.255.0"
+                    }
+                }
+            },
+            "logging": {
+                "event": {
+                    "link-status": null
+                }
+            }
+        },
+        {
+            "name": 948,
+            "ip": {
+                "address": {
+                    "primary": {
+                        "address": "192.168.21.1",
+                        "mask": "255.255.255.0"
+                    }
+                },
+                "verify": {
+                    "unicast": {
+                        "source": {
+                            "reachable-via": "rx"
+                        }
+                    }
+                },
+                "Cisco-IOS-XE-nat:nat": {
+                    "inside": null
+                },
+                "Cisco-IOS-XE-nbar:nbar": {
+                    "protocol-discovery": {}
+                }
+            },
+            "logging": {
+                "event": {
+                    "link-status": null
+                }
+            }
+        }
+    ]
+}
