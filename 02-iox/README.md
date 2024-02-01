@@ -14,6 +14,9 @@ In this module, you will use an IOx application to monitor environmental conditi
 
 ## Set-up your IR
 
+> [!NOTE]  
+> If you don't have a IR1101 available, connect the Raspberry Pi to your laptop and run the `dummy_scripts/ir/main.py` script there. 
+
 1. Switch to the IR subfolder in your terminal.
 
 ```
@@ -45,7 +48,7 @@ $ docker save -o rootfs.tar ioxweb
 $ ./ioxclient package .
 ```
 
-5. Now, you should see a `package.tar` file created in this subfolder. If not, use the `arm_package.tar` package already present in further steps.
+5. Now, you should see a `package.tar` file created in this subfolder. 
 
 6. Upload, activate and start this package with id `ioxweb` in the IOx subsystem on the [IR1101 Local Manager](https://www.cisco.com/c/en/us/td/docs/security/cyber_vision/publications/IR1101/Release-4-2-0/b_Cisco_Cyber_Vision_Network_Sensor_Installation_Guide_for_Cisco_IR1101/m_Procedure_with_the_Local_Manager_IRxxxx.pdf).
 
