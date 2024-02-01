@@ -4,13 +4,16 @@ In this module, you will use an IOx application to monitor environmental conditi
 
 ![](usecase.png)
 
-## Hardware configuration requirements
+## Hardware requirements
+
+> [!TIP]  
+> Throughout the set-up steps, you will find out how to use the `dummy_scripts` folder instead of this equipment.
 
 1. A Cisco IR1101 supporting IOx. (This code was tested using IOS-XE version 17.12.02)
 
-2. Connected to a downlink on the IR1101: a Raspberry PI 4.
+3. Connected to a downlink on the IR1101: a Raspberry PI 4.
 
-3. On the Raspberry Pi: a I2C temperature sensor (e.g., [DHT20](https://www.adafruit.com/product/5183))
+4. On the Raspberry Pi: a I2C temperature sensor (e.g., [DHT20](https://www.adafruit.com/product/5183))
 
 ## Set-up your IR
 
