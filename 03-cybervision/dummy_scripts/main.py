@@ -1,4 +1,5 @@
 from datetime import date, timedelta
+from dotenv import load_dotenv
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -6,20 +7,20 @@ from email.mime.text import MIMEText
 
 import urllib.request
 import urllib.parse
-import requests, sys
+import requests, sys, os, json
 requests.packages.urllib3.disable_warnings()
 
+load_dotenv()
+
 # Variables
-smtp_host = ""
-smtp_port = 25
-smtp_username = ""
-smtp_password = ""
+smtp_host = os.environ['SMTP_HOST']
+smtp_port = 587
+smtp_username = os.environ['SMTP_USERNAME']
+smtp_password = os.environ['SMTP_PASS']
 smtp_use_tls = False
 smtp_use_auth = False
-smtp_from_address = ""
-smtp_to_address = ""
-cv_center_ip = ""
-cv_token = ""
+smtp_from_address = os.environ['SMTP_FROM']
+smtp_to_address = os.environ['SMTP_TO']
 
 # Helper: email notifier
 class EmailNotifier:
@@ -46,45 +47,6 @@ class EmailNotifier:
             msg.attach(MIMEText(body, 'plain'))
             text = msg.as_string()
             server.sendmail(fromAddr, toAddr, text)
-
-# Helper: call Cyber Vision API
-def call_route(route, params):
-    route += '?'
-    # append parameters
-    for key in params.keys():
-        route += '&' + urllib.parse.quote(str(key)) + '=' + \
-                 urllib.parse.quote(str(params[key]))
-    # finalise the route
-    route = url_for(cv_center_ip, route)
-    # launch the request
-    try:
-        json_data = requests.get(route, headers={"X-Token-Id": cv_token}, verify=False).json()
-        print("LOG: Succesfull call to %s" % route)
-    except:
-        print("ERROR: Unable to make a call to %s, exiting..." % route)
-        sys.exit(1)
-    return json_data
-
-# Helper: call Cyber Vision API recursively
-def call_route_recursive(route, params=None):
-    results = []
-    need_more = True
-    offset = 0
-    batch_size = 2000
-    while need_more:
-        if not params:
-            params = {}
-        params.update({'limit': batch_size, 'offset': offset})
-        t = call_route(route, params)
-        results = results + t
-        # if there is nil answer or we ask for batch_size (ie 2000) and get less, stop
-        if len(t) == 0 or batch_size > len(t):
-            need_more = False
-    return results
-
-# Helper: construct Cyber Vision URL
-def url_for(center_ip, route):
-    return f"https://{center_ip}{route}"
 
 # Helper: render event e-mail
 def render(events = [], link = ""):
@@ -131,14 +93,7 @@ def alert_events():
     print (('ici1'))
 
     # STEP 1: Retrieve all events from interval
-    route = "/api/1.0/event"
-    parameters = {
-            'start': filter_start.strftime('%Y-%m-%d %H:%M'),
-            'end': filter_end.strftime('%Y-%m-%d %H:%M'),
-            'severity': "very_high",
-            'severity': "high",
-        }
-    data = call_route_recursive(route, params=parameters)
+    data = json.load('response.json')
 
     # STEP 2: Apply logic to events returned
     events = []
@@ -152,7 +107,7 @@ def alert_events():
         # STEP 3: Send notifications (Email)
         try:
             # STEP 3.1: Craft the e-mail body
-            email_body = render(events, "https://%s" % cv_center_ip)
+            email_body = render(events, "https://%s" % "Cyber Vision DUMMY")
 
             # STEP 3.2: Craft the e-mail
             subject = "Cisco Cyber Vision - %d Important Event(s) (From: %s To: %s)" % (nb_new_events, filter_start, filter_end)
