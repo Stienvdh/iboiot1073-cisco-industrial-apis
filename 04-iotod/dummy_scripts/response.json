@@ -1,0 +1,36 @@
+{
+    "objectType": "DeviceListVo",
+    "total": 1,
+    "size": 20,
+    "page": 0,
+    "results": [
+        {
+            "name": "DUMMY_DEVICE",
+            "meterId": "",
+            "status": "down",
+            "lastHeard": "9 hours ago",
+            "deviceCategory": "ROUTER",
+            "deviceType": "IR1100",
+            "function": "",
+            "runningFirmwareVersion": "X.Y.Z",
+            "ip": "A.B.C.D",
+            "openIssues": "Down, Port Down, Port Down, Port Down, Port Down",
+            "labels": "",
+            "lat": "Not Defined",
+            "lng": "Not Defined",
+            "managedBy": "IoT Operations Dashboard",
+            "eid": "DUMMY_DEVICE",
+            "href": "/resource/rest/api/v1/devices/DUMMY_DEVICE",
+            "configGroup": "default-ir1100",
+            "configGroupId": 11111111,
+            "Up Time": "5min ",
+            "SN": "DUMMY_DEVICE",
+            "ioxIp": "A.B.C.D",
+            "fogdId": "DUMMY_DEVICE",
+            "deviceStatus": "Redirect Successful",
+            "lastPnpSyncTimestamp": "Fri Dec 02 15:42:11 GMT 1999",
+            "pnpSyncError": "",
+            "conflicted": false
+        }
+    ]
+}
