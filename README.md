@@ -13,3 +13,5 @@ Happy programming!
 [Module 2 - Use IOx to environmental monitor conditions on your factory floor](02-iox)
 
 [Module 3 - Use Cyber Vision to get alerted on critical security events in your industrial network](03-cybervision)
+
+[Module 4 - Use IOT Operations Dashboard to give your devices a meaningful name](04-iotod)
