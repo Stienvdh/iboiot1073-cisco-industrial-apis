@@ -6,14 +6,14 @@ In this module, you will use Cisco Cyber Vision APIs to keep track of the high-c
 
 ## Set-up
 
+> [!TIP]
+> If you are not planning to use a real network device, change to the `dummy_scripts` directory.
+
 1. Switch to this folder in your terminal.
 
 ```
 $ cd 03-cybervision
 ```
-
-> [!TIP]
-> If you are not planning to use a real network device, change to the `dummy_scripts` directory and skip right to the `Instructions` part of these steps.
 
 2. Install the Python libraries required.
 
@@ -29,8 +29,6 @@ SMTP_USERNAME=<your-gmail-address>
 SMTP_PASS=<your-gmail-app-password>
 SMTP_FROM=<your-gmail-address>
 SMTP_TO=<your-gmail-address>
-CV_CENTER=<your-cybervision-center-ip>
-CV_TOKEN=<your-cybervision-center-api-token>
 ```
 
 ## Instructions
