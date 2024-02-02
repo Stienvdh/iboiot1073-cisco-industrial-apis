@@ -33,7 +33,7 @@ SMTP_TO=<your-gmail-address>
 
 ## Instructions
 
-1. In one terminal, run the `main.py` script. 
+1. In a terminal, run the `main.py` script. 
 
 ```
 $ python3 main.py
