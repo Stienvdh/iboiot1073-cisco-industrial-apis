@@ -2,7 +2,7 @@
 
 # Fantastic APIs on your Factory Floor, and Where to Find Them.
 
-In this repository, you can find the supporting code and documentation for Cisco Live session IBOIOT-1073, titled *Fantastic APIs on your Factory Floor, and Where to Find Them.* This session was delivered by Stien Vanderhallen (contact: stienvan@cisco.com).
+In this repository, you can find the supporting code and documentation for Cisco Live session IBOIOT-1073, titled *Fantastic APIs on your Factory Floor, and Where to Find Them.* This session was delivered by Stien Vanderhallen (contact: stienvan@cisco.com). Slides can be found in the root directory of this folder, in PDF format.
 
 These different modules aim to get you started with netoork automation in an industrial context, with an eye for practical OT use cases and tools. Within each module, you will find the relevant code, use case and instructions. 
 
