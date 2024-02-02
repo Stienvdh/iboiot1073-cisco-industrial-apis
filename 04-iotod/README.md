@@ -6,14 +6,14 @@ In this module, you will use Cisco IoT Operations Dashboard APIs to make the man
 
 ## Set-up
 
-> [!TIP]
-> If you are not planning to use a real network device, change to the `dummy_scripts` directory.
-
 1. Switch to this folder in your terminal.
 
 ```
 $ cd 04-iotod
 ```
+
+> [!TIP]
+> If you are not planning to use a real network device, switch to the `dummy_scripts` subdirectory.
 
 2. Install the Python libraries required.
 
@@ -33,7 +33,7 @@ CLIENT_ID=<your-api-client-id>
 
 ## Instructions
 
-1. In one terminal, run the `main.py` script. 
+1. In a terminal, run the `main.py` script. 
 
 ```
 $ python3 main.py
