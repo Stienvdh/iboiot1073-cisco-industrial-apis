@@ -11,3 +11,5 @@ Happy programming!
 [Module 1 - Use RESTCONF to manage VLANs on your devices](01-restconf)
 
 [Module 2 - Use IOx to environmental monitor conditions on your factory floor](02-iox)
+
+[Module 3 - Use Cyber Vision to get alerted on critical security events in your industrial network](03-cybervision)
