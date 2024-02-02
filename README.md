@@ -1,3 +1,5 @@
+![Alt text](image-1.png)
+
 # Fantastic APIs on your Factory Floor, and Where to Find Them.
 
 In this repository, you can find the supporting code and documentation for Cisco Live session IBOIOT-1073, titled *Fantastic APIs on your Factory Floor, and Where to Find Them.* This session was delivered by Stien Vanderhallen (contact: stienvan@cisco.com).
@@ -15,3 +17,5 @@ Happy programming!
 [Module 3 - Use Cyber Vision to get alerted on critical security events in your industrial network](03-cybervision)
 
 [Module 4 - Use IOT Operations Dashboard to give your devices a meaningful name](04-iotod)
+
+![Alt text](image-2.png)
